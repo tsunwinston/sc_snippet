@@ -1,0 +1,75 @@
+TITLE:: Snippet
+summary:: Snippet is a quick and efficient code generation tool designed for the SuperCollider IDE.
+categories:: Live Coding
+related:: /
+
+DESCRIPTION::
+Snippet is a quick and efficient code generation tool designed for the SuperCollider IDE. It allows users to expand shorthand text into pre-written SuperCollider code snippets by simply typing the shorthand and double-tapping the Control key. This tool streamlines the coding process, saving time and reducing repetitive typing.
+
+
+CLASSMETHODS::
+
+METHOD:: enable
+enable snippet
+
+METHOD:: disable
+disable snippet
+
+METHOD:: addSnippet
+add a single snippet
+
+ARGUMENT:: keyValPair
+an association of key(a symbol of snippet) and value(a string of the target code)
+e.g. \px -> "p = ProxySpace(--s.boot--).push;"
+
+
+METHOD:: keys
+get all existing snippets
+
+METHOD:: addSnippets
+add multiple snippets
+
+ARGUMENT:: keyValPairs
+an array of associations, see .addSnippet
+
+
+INSTANCEMETHODS::
+
+
+EXAMPLES::
+
+code::
+
+Enable Snippet by running
+Snippet.enable;
+
+Type a shorthand snippet in the IDE and double-tap the Control key. The shorthand will automatically transform into the corresponding code snippet.
+
+1. ndf //Double-tap the Control key.
+
+Ndef('foo',{ })
+
+
+2. pdf //Double-tap the Control key.
+
+Pdef('foo',Pbind(
+'instrument','default',
+'degree',Pseq([0,1,2,3],inf),
+'dur',Pseq([1],inf)
+));
+
+3. syn //Double-tap the Control key.
+
+SynthDef('foo',{|out=0,freq=440,pan=0,amp=1,gate=1|
+
+	Out.ar(out,  )
+}).add;
+
+/////////////////////////////////////////
+
+//To enable auto starting and saving, run:
+
+Snippet.settings
+
+
+::

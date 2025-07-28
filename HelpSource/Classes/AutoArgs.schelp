@@ -1,0 +1,38 @@
+TITLE:: AutoArgs
+summary:: Auto argument completion tool for SuperCollider IDE.
+categories:: Undocumented classes
+related:: Classes/Snippet, Reference/SomeRelatedStuff, etc.
+
+DESCRIPTION::
+(put long description here)
+
+
+CLASSMETHODS::
+
+METHOD:: disable
+Disable auto completion
+
+METHOD:: enable
+Enable auto completion
+
+
+INSTANCEMETHODS::
+
+
+EXAMPLES::
+
+code::
+
+AutoArgs.enable;//run to enable Auto Completion mode
+
+SinOsc.ar();
+
+/*
+place cursor in the parenthesis for the SinOsc.ar then press Ctrl+k or Ctrl+j;
+
+Ctrl+j :automatically format and fill-in default argument values;
+Ctrl+k :similar to above, also adding argument names and a .kr.
+
+*/
+
+::
